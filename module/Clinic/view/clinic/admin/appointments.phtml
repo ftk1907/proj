@@ -1,0 +1,20 @@
+<h1>Appointments</h1>
+<?php if(!empty($this->appointments)): ?>
+<table>
+	<!-- Headers -->
+	<tr>
+		<th>id</th>
+		<th>date</th>
+	</tr>
+
+<?php foreach($this->appointments as $appointment): ?>
+	<!-- Data -->
+	<tr>
+		<td><?= $appointment->id ?></td>
+		<td><?= $appointment->date ?></td>
+	</tr>
+<?php endforeach; ?>
+</table>
+<?php endif; ?>
+
+no more appointments

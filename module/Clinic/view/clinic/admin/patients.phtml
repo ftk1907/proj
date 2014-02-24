@@ -1,0 +1,52 @@
+
+<h1>Patients</h1>
+
+<table>
+<!-- Headers -->
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Surname</th>
+		<th><!-- Appointments --></th>
+		<th><!-- Email --></th>
+		<th>&nbsp;</th>
+		<th>&nbsp;</th>
+	</tr>
+
+<?php foreach($this->patients as $patient): ?>
+<!-- Data -->
+	<tr>
+		<td> <?= $patient->id ?> </td>
+		<td> <?= $patient->name ?> </td>
+		<td> <?= $patient->surname ?> </td>
+		<td> 
+			<a href="
+				<?= $this->url('admin', array(
+						'action' => 'appointments', 
+						'id' => $patient->id
+					));
+				?>">appointments
+			</a>
+		</td>
+		<td> <a href="mailto:<?= $patient->email ?> ">email</a> </td>
+		<td>
+			<a href="
+				<?= $this->url('admin', array(
+						'action' => 'editpatient', 
+						'id' => $patient->id
+					)); ?>">edit
+			</a> 
+		</td>
+		<td> 
+			<a href="
+				<?= $this->url('admin', array(
+						'action' => 'deletepatient', 
+						'id' => $patient->id
+					)); ?>">delete
+			</a> 
+		</td>
+	</tr>
+
+<?php endforeach; ?>
+
+</table>

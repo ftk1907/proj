@@ -1,0 +1,32 @@
+<!-- <pre>
+<?php
+// echo get_class($this->form()) . "\n" ;
+// var_dump(get_class_methods(get_class($this->form())));
+?>
+</pre>
+ -->
+<?php
+$form = $this->form;
+$form->setAttribute('action', $this->url('admin', array('action' => 'login')));
+$form->prepare();
+?><?php echo $this->form()->openTag($form);  ?>
+<table>
+
+<tr>
+	<th colspan="2">Login</th>
+</tr>
+<tr> 
+	<td> <?php echo $this->formLabel($form->get('email')); ?> </td>
+	<td> <?php echo $this->formInput($form->get('email')) . '<br>'; ?> </td>
+</tr>
+<tr> 
+	<td> <?php echo $this->formLabel($form->get('password')); ?> </td>
+	<td> <?php echo $this->formInput($form->get('password')) . '<br>'; ?> </td>
+</tr>
+<tr> 
+	<td><a href="#forgotpassword">Forgot Password</a></td>
+	<td style='text-align: right;'> <?php echo $this->formSubmit($form->get('submit')); ?> </td>
+</tr>
+
+
+</table><?php echo $this->form()->closeTag(); ?>

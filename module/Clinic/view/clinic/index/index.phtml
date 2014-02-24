@@ -1,0 +1,25 @@
+<!-- <pre>
+<?php 
+var_dump($appointments)
+
+?>
+</pre>
+	
+ <table>
+	<tr>
+		<th>Appointments</th>
+	</tr>
+	<?php  foreach($appointments as $appointment): ?>
+	<tr>
+		<td><?php echo $appointment->id ?></td>
+	</tr>
+	<?php  endforeach; ?>
+</table> -->
+<?php 
+$date = new DateTime('Europe/London');
+$date->add(new DateInterval(P10D));
+echo $date->format('y-m-d');
+ ?>
+<table>
+	
+</table>

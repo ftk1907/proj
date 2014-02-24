@@ -1,0 +1,977 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"login",
+				"loginActionView"
+			],
+			[
+				"table",
+				"tableGateway"
+			],
+			[
+				"InputFilter",
+				"InputFilterInterface"
+			],
+			[
+				"name",
+				"name"
+			],
+			[
+				"where",
+				"where_clause"
+			],
+			[
+				"appo",
+				"appointments"
+			],
+			[
+				"sans-serif",
+				"Helvetica Neue, Helvetica, Arial, sans-serif"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"inli",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "module/Clinic/src/Clinic/Controller/AbstractUserController.php",
+			"settings":
+			{
+				"buffer_size": 488,
+				"line_ending": "Unix",
+				"name": "<?php"
+			}
+		},
+		{
+			"file": "module/Clinic/view/clinic/admin/registerDoctor.phtml",
+			"settings":
+			{
+				"buffer_size": 778,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "module/Clinic/src/Clinic/Model/Doctors.php",
+			"settings":
+			{
+				"buffer_size": 1831,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "module/Clinic/src/Clinic/Model/DoctorsTable.php",
+			"settings":
+			{
+				"buffer_size": 757,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "module/Clinic/src/Clinic/Controller/AdminController.php",
+			"settings":
+			{
+				"buffer_size": 2567,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "module/Clinic/view/clinic/admin/appointments.phtml",
+			"settings":
+			{
+				"buffer_size": 356,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "module/Clinic/src/Clinic/Model/Appointments.php",
+			"settings":
+			{
+				"buffer_size": 357,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "module/Clinic/view/clinic/admin/login.phtml",
+			"settings":
+			{
+				"buffer_size": 39,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/css/style.css",
+			"settings":
+			{
+				"buffer_size": 1117,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "module/Clinic/src/Clinic/Model/AppointmentsTable.php",
+			"settings":
+			{
+				"buffer_size": 763,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<style type=\"text/css\">\n</style>\n\n<h1>Doctors</h1>\n<table>\n<!-- Headers -->\n	<tr>\n		<th>Id</th>\n		<th>Name</th>\n		<th>Surname</th>\n		<th><!-- Appointments --></th>\n		<th><!-- Email --></th>\n		<th>&nbsp;</th>\n		<th>&nbsp;</th>\n	</tr>\n\n<?php foreach($this->doctors as $doctor): ?>\n<!-- Data -->\n	<tr>\n		<td> <?= $doctor->id ?> </td>\n		<td> <?= $doctor->name ?> </td>\n		<th> <?= $doctor->surname ?> </th>\n		<td> \n			<a href=\"\n				<?= $this->url('admin', array(\n						'action' => 'appointments', \n						'id' => $doctor->id\n					));\n				?>\">appointments\n			</a>\n		</td>\n		<td> <a href=\"mailto:<?= $doctor->email ?> \">email</a> </td>\n		<td>\n			<a href=\"\n				<?= $this->url('admin', array(\n						'action' => 'editdoctor', \n						'id' => $doctor->id\n					)); ?>\">Edit\n			</a> \n		</td>\n		<td> \n			<a href=\"\n				<?= $this->url('admin', array(\n						'action' => 'deletedoctor', \n						'id' => $doctor->id\n					)); ?>\">delete\n			</a> \n		</td>\n	</tr>\n\n<?php endforeach; ?>\n\n</table>",
+			"file": "module/Clinic/view/clinic/admin/doctors.phtml",
+			"file_size": 1046,
+			"file_write_time": 130375798840000000,
+			"settings":
+			{
+				"buffer_size": 969,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "module/Clinic/Module.php",
+			"settings":
+			{
+				"buffer_size": 2193,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "module/Clinic/src/Clinic/Form/DoctorRegisterForm.php",
+			"settings":
+			{
+				"buffer_size": 1484,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "module/Clinic/view/clinic/user/index.phtml",
+			"settings":
+			{
+				"buffer_size": 29,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "composer.json",
+			"settings":
+			{
+				"buffer_size": 429,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "module/Clinic/src/Clinic/Controller/UserController.php",
+			"settings":
+			{
+				"buffer_size": 435,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "module/Clinic/src/Clinic/Controller/IndexController.php",
+			"settings":
+			{
+				"buffer_size": 609,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "module/Clinic/view/clinic/index/index.phtml",
+			"settings":
+			{
+				"buffer_size": 376,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 107.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/fenerlitk/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Applications/AMPPS/www/confucious/module/Clinic/src/Clinic/Controller/IndexController.php",
+		"/Applications/AMPPS/www/confucious/module/Clinic/src/Clinic/Model/Calendar.php",
+		"/Applications/AMPPS/www/confucious/module/Clinic/Module.php",
+		"/Applications/AMPPS/www/confucious/module/Clinic/view/clinic/user/index.phtml",
+		"/Applications/AMPPS/www/confucious/module/Clinic/config/module.config.php",
+		"/Applications/AMPPS/www/confucious/module/Clinic/view/clinic/user/viewCalendar.phtml",
+		"/Applications/AMPPS/www/confucious/module/Clinic/src/Clinic/Controller/UserController.php",
+		"/Users/fenerlitk/Library/Application Support/Sublime Text 3/Packages/PhpNamespace/Default (OSX).sublime-keymap",
+		"/Users/fenerlitk/Library/Application Support/Sublime Text 3/Packages/PhpNamespace/Base File.sublime-settings",
+		"/Applications/AMPPS/www/confucious/LICENSE.txt",
+		"/Applications/AMPPS/www/confucious/vendor/zendframework/zendframework/library/Zend/ModuleManager/Listener/ListenerOptions.php",
+		"/Applications/AMPPS/www/confucious/module/Clinic/view/clinic/admin/login.phtml",
+		"/Applications/AMPPS/www/confucious/module/Clinic/src/Clinic/Form/AdminLoginForm.php",
+		"/Applications/AMPPS/www/confucious/vendor/zendframework/zendframework/library/Zend/Memory/Value.php",
+		"/Applications/AMPPS/www/confucious/vendor/zendframework/zendframework/library/Zend/Validator/ValidatorInterface.php",
+		"/Applications/AMPPS/www/confucious/vendor/zendframework/zendframework/library/Zend/View/ViewEvent.php",
+		"/Applications/AMPPS/www/confucious/vendor/zendframework/zendframework/library/Zend/View/View.php",
+		"/Applications/AMPPS/www/confucious/module/Application/view/error/404.phtml",
+		"/Applications/AMPPS/www/confucious/vendor/zendframework/zendframework/library/Zend/Db/Metadata/Object/ViewObject.php",
+		"/Applications/AMPPS/www/confucious/vendor/zendframework/zendframework/library/Zend/Text/Exception/OverflowException.php",
+		"/Applications/AMPPS/www/confucious/vendor/zendframework/zendframework/library/Zend/Form/Element/Week.php",
+		"/Applications/AMPPS/www/confucious/vendor/zendframework/zendframework/library/Zend/Cache/Storage/Adapter/MemoryOptions.php",
+		"/Applications/AMPPS/www/confucious/init_autoloader.php",
+		"/Applications/AMPPS/www/confucious/vendor/zendframework/zendframework/library/Zend/Db/Sql/Predicate/IsNull.php",
+		"/Users/fenerlitk/Library/Application Support/Sublime Text 3/Packages/User/Plain text.sublime-settings",
+		"/Users/fenerlitk/Library/Application Support/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/Applications/AMPPS/www/confucious/module/Clinic/src/Clinic/Model/Doctors.php",
+		"/Applications/AMPPS/www/confucious/module/Clinic/src/Clinic/Controller/AdminController.php",
+		"/Applications/AMPPS/www/confucious/module/Clinic/view/clinic/admin/index.phtml",
+		"/Applications/AMPPS/www/confucious/module/Clinic/view/clinic/index/index.phtml",
+		"/Users/fenerlitk/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Applications/AMPPS/www/confucious/vendor/composer/installed.json",
+		"/Applications/AMPPS/www/clinic/config/autoload/local.php",
+		"/Applications/AMPPS/www/clinic/module/Album/view/album/album/index.phtml",
+		"/Applications/AMPPS/www/clinic/module/Clinic/view/layout/layout.phtml",
+		"/Applications/AMPPS/www/clinic/config/autoload/global.php",
+		"/Applications/AMPPS/www/clinic/config/application.config.php",
+		"/Applications/AMPPS/www/clinic/module/Album/src/Album/Model/AlbumTable.php",
+		"/Applications/AMPPS/www/clinic/module/Album/Module.php",
+		"/Applications/AMPPS/www/clinic/public/index.php",
+		"/Applications/AMPPS/www/clinic/module/Clinic/src/Clinic/Controller/IndexController.php",
+		"/Applications/AMPPS/www/clinic/module/Clinic/view/clinic/index/delete.phtml",
+		"/Applications/AMPPS/www/clinic/module/Clinic/config/module.config.php",
+		"/Applications/AMPPS/www/clinic/module/Clinic/src/Clinic/Model/Doctors.php",
+		"/Applications/AMPPS/www/clinic/module/Clinic/src/Clinic/Model/DoctorsTable.php",
+		"/Applications/AMPPS/www/clinic/module/Clinic/view/clinic/index/index.phtml",
+		"/Applications/AMPPS/www/clinic/module/Clinic/Module.php",
+		"/Applications/AMPPS/www/clinic/module/Album/autoload_classmap.php",
+		"/Applications/AMPPS/www/clinic/module/Album/config/module.config.php",
+		"/Applications/AMPPS/www/clinic/module/Album/src/Album/Controller/AlbumController.php",
+		"/Applications/AMPPS/www/clinic/module/Album/view/album/album/add.phtml",
+		"/Applications/AMPPS/www/clinic/module/Album/src/Album/Model/Album.php",
+		"/Applications/AMPPS/www/clinic/module/Album/view/album/album/edit.phtml",
+		"/Applications/AMPPS/www/clinic/module/Album/view/album/album/delete.phtml",
+		"/Applications/AMPPS/apache/conf/extra/httpd-vhosts.conf",
+		"/Applications/AMPPS/www/clinic/module/Application/src/Application/Controller/IndexController.php",
+		"/Applications/AMPPS/www/clinic/module/Application/view/layout/layout.phtml",
+		"/Applications/AMPPS/www/clinic/module/Doctors/Module.php",
+		"/Applications/AMPPS/www/clinic/module/Doctors/config/module.config.php",
+		"/Applications/AMPPS/www/clinic/module/Doctors/src/Doctors/Controller/IndexController.php",
+		"/Applications/AMPPS/www/clinic/module/Doctors/autoload_classmap.php",
+		"/Applications/AMPPS/www/clinic/module/Application/view/application/index/index.phtml",
+		"/Users/fenerlitk/Sites/HTML5/inc/style.css",
+		"/Users/fenerlitk/Sites/HTML5/index.php",
+		"/private/var/folders/zr/qm1y4wfn7z7b9qf6ty2f2gk80000gn/T/4409d225-1fba-48f1-be5e-ed7fe3623656/inc/style.css",
+		"/Applications/Sublime Text.app/Contents/MacOS/changelog.txt",
+		"/Applications/MampStack.app/Contents/Resources/app/apache2/info.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"  ",
+			"email",
+			"calendar",
+			"no-wrap",
+			"white",
+			"book",
+			">\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "module/Clinic/src/Clinic/Controller/AbstractUserController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 488,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								227,
+								227
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "module/Clinic/view/clinic/admin/registerDoctor.phtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 778,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								778,
+								778
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "module/Clinic/src/Clinic/Model/Doctors.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1831,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								801,
+								801
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 503.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "module/Clinic/src/Clinic/Model/DoctorsTable.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 757,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								368,
+								368
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "module/Clinic/src/Clinic/Controller/AdminController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2567,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1257,
+								1257
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 250.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "module/Clinic/view/clinic/admin/appointments.phtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 356,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								57
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "module/Clinic/src/Clinic/Model/Appointments.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 357,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								356,
+								357
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "module/Clinic/view/clinic/admin/login.phtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 39,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								38,
+								38
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "public/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1117,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1100,
+								1100
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 79.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "module/Clinic/src/Clinic/Model/AppointmentsTable.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 763,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								566,
+								566
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "module/Clinic/view/clinic/admin/doctors.phtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 969,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								24,
+								24
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "module/Clinic/Module.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2193,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								808,
+								778
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 393.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "module/Clinic/src/Clinic/Form/DoctorRegisterForm.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1484,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								521,
+								521
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "module/Clinic/view/clinic/user/index.phtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								27,
+								27
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "composer.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 429,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								420,
+								420
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "module/Clinic/src/Clinic/Controller/UserController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 435,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								429,
+								429
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "module/Clinic/src/Clinic/Controller/IndexController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 609,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								444,
+								444
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "module/Clinic/view/clinic/index/index.phtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 376,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								357,
+								250
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "confucious.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Applications/AMPPS/www/confucious/confucious.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 257.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
