@@ -76,13 +76,15 @@ class AdminController extends AbstractClinicController {
 	{
 		# code... 
 		# read table name from param
-		# fetch results	}
+		# fetch results	
+	}
 
 	public function deleteAction()
 	{
 		# code... 
 		# read table name from param
-		# fetch results	}
+		# fetch results	
+	}
 
 
 	public function patientsAction()
