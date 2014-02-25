@@ -47,3 +47,23 @@ tr {
 td, th {
   padding: .5em;
 }
+
+.day, .doctor, .time {
+  padding: .5em;
+}
+.day {
+  border: 1px solid lightgrey;
+  margin-bottom: .5em;
+}
+
+.doctor {
+  /*background: green;*/
+  display: inline-block;
+  width: 24%;
+}
+
+.time {
+  border-bottom: 1px solid lightgrey;
+  display: inline-block;
+  width: 30%;
+}

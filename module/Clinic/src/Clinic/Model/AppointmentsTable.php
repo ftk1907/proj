@@ -25,6 +25,35 @@ class AppointmentsTable {
         return $resultSet;
     }
 
+    public function fetchPatientsAppointments($patientId)
+    {
+        $resultSet = $this->tableGateway->select(array('patient'=>$patientId));
+        return $resultSet;
+    }
+
+    public function fetchPractitionersAppointments($practitionerId)
+    {
+        $resultSet = $this->tableGateway->select(array('patient'=>$patientId));
+        return $resultSet;
+    }
+
+    public function bookAppointment($appointment)
+    {
+        $data = array(
+            'patient'  => $appointment->patient,
+            'doctor'   => $appointment->doctor,
+            'date'     => $appointment->date,
+        );
+
+        // Insert the data to the table
+        $this->tableGateway->insert($data);
+    }
+
+    public function cancelAppointment($id)
+    {
+        $this->tableGateway->delete(array('id' => $id));
+    }
+
     public function fetchThisWeek()
     {
         $where_clause = "date between CURDATE() AND ADDDATE(CURDATE(), INTERVAL 7 DAY);";

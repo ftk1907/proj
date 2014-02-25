@@ -1,0 +1,28 @@
+<?php
+$days = $this->calendar->getSlots();
+$doctors = ['Doc1', 'Doc2', 'Doc3', 'Doc4'];
+?>
+
+<!-- <pre>
+    <?php
+    var_dump($days);
+     ?>
+</pre> -->
+
+
+
+<div class="container">
+    <?php foreach($days as $day=>$date): ?>
+    <div class="day">
+        <h4><?= $day ?></h4>
+        <?php foreach ($doctors as $doctor): ?>
+            <div class="doctor">
+            <h5><?php echo $doctor ?></h5>
+            <?php foreach($date as $d=>$time): ?>
+                <div class="time"> <?=$time?> </div>
+            <?php endforeach ?>
+            </div>
+        <?php endforeach; ?>
+    </div>
+    <?php endforeach; ?>
+</div>

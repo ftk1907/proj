@@ -86,6 +86,7 @@ class AdminController extends AbstractClinicController {
 		# read table name from param
 		# read id
 		# delete from table
+            
 	}
 
 

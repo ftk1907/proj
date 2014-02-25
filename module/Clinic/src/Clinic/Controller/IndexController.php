@@ -4,8 +4,9 @@ namespace Clinic\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
+use Clinic\Model\Calendar;
 
-class IndexController extends AbstractActionController 
+class IndexController extends AbstractActionController
 {
 
 	protected $appointmentsTable;
@@ -16,6 +17,11 @@ class IndexController extends AbstractActionController
 			'appointments' => $this->getAppointmentsTable()->fetchThisWeek(),
 		);
 	}
+
+    public function calendarAction()
+    {
+        return array('calendar' => new Calendar());
+    }
 
 	public function getAppointmentsTable()
     {
