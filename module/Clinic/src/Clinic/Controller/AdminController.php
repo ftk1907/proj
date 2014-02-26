@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Clinic\Controller;
 
@@ -17,7 +17,7 @@ class AdminController extends AbstractClinicController {
 	{
 		$this->alf = new AdminLoginForm();
 		return array(
-			'form' => $this->alf,			
+			'form' => $this->alf,
 		);
 	}
 
@@ -67,26 +67,25 @@ class AdminController extends AbstractClinicController {
 
 	public function editAction()
 	{
-		# code... 
+		# code...
 		# read table name from param
 		# read id
 		# show form or update table
 	}
-	
+
 	public function addAction()
 	{
-		# code... 
+		# code...
 		# read table name from param
 		# show form or update table
 	}
 
 	public function deleteAction()
 	{
-		# code... 
-		# read table name from param
-		# read id
-		# delete from table
-            
+		$name  = $this->params('entity');
+		$id    = $this->params('id');
+		$table = $this->getTable($name);
+		$table->delete($id);
 	}
 
 

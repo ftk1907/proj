@@ -6,16 +6,21 @@ use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
 /**
-* 
+*
 */
 abstract class AbstractClinicController extends AbstractActionController
 {
 	private   $loggedIn = true;
-	
+
 	protected $doctorsTable;
 	protected $appointmentsTable;
 	protected $practitionersTable;
 	protected $patientsTable;
+
+	protected static const Patients = 0;
+	protected static const Doctors = 1;
+	protected static const Practitioners = 2;
+	protected static const Appointments = 3;
 
 
 	public function indexAction()
@@ -25,7 +30,7 @@ abstract class AbstractClinicController extends AbstractActionController
 
 	public function loginAction()
 	{
-		
+
 	}
 
 	public function checkIfLoggedIn()
@@ -37,13 +42,37 @@ abstract class AbstractClinicController extends AbstractActionController
 		}
 	}
 
+	public function getTable($entity)
+	{
+		$table = null;
+		switch ($entity) {
+			case "patients":
+				$table = $this->getPatientsTable();
+				break;
+			case "doctors":
+				$table = $this->getDoctorsTable();
+				break;
+			case "practitioners":
+				$table = $this->getPractitionersTable();
+				break;
+			case "patients":
+				$table = $this->getPatientsTable();
+				break;
+			default:
+				# code...
+				break;
+		}
+
+		return $table;
+	}
+
 	public function getPatientsTable()
 	{
 		if (!$this->patientsTable) {
 			$sm = $this->getServiceLocator();
 			$this->patientsTable = $sm->get('Clinic\Model\PatientsTable');
 		}
-		return $this->patientsTable;	
+		return $this->patientsTable;
 	}
 
 	public function getDoctorsTable()

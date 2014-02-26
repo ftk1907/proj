@@ -51,6 +51,7 @@ class AppointmentsTable {
 
     public function cancelAppointment($id)
     {
+        //TODO: email doctor + practitioner
         $this->tableGateway->delete(array('id' => $id));
     }
 

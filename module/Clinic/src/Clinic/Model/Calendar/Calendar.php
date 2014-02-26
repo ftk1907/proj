@@ -12,21 +12,19 @@ class Calendar
     protected $next_slot;
     protected $day_count;
     protected $slots;
-    protected $beginning_of_day;
 
-	function __construct()
-	{
+    function __construct()
+    {
         $this->date = new \DateTime("Europe/London");
-        $this->beginning_of_day = '10:00';
+        $this->beginning_of_day = 10;
         $this->end_of_day = '14:40';
         $this->slot_duration_minutes = 20;
         $this->slots = array();
-	}
+    }
 
     public function isEndOfDay()
     {
-        return !($this->date->format('H:i') >= $this->begenning_of_day
-                 && $this->date->format('H:i') <= $this->end_of_day);
+        return ($this->date->format('H:i') >= $this->end_of_day);
     }
 
     public function isEndOfWeek()

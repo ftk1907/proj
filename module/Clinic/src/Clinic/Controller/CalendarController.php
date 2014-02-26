@@ -18,6 +18,23 @@ class CalendarController extends AbstractClinicController
     public function bookAction()
     {
         $this->checkIfLoggedIn();
+        $patient = $this->getUserId();
+
+        $appointment = new Appointments();
+
+        $doctor = $this->args('doctor');
+        $date   = $this->args('date');
+
+        $appointment->exchangeArray(array(
+            'patient'       => $patient,
+            'practitioner'  => $doctor,
+            'date'          => $date,
+        ));
+
+        $this->getAppointmentsTable()->bookAppointment($appointment);
+        $message = 'booked';
+
+        return array('message' => $message);
     }
 
     public function cancelAction()
