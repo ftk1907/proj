@@ -12,6 +12,11 @@ class WorkingDay
         $timeSlots = array();
     }
 
+    public function ($value='')
+    {
+        # code...
+    }
+
     public function nextWorkingDay()
     {
         return new \DateTime();
