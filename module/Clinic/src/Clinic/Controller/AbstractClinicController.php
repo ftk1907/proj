@@ -17,10 +17,10 @@ abstract class AbstractClinicController extends AbstractActionController
 	protected $practitionersTable;
 	protected $patientsTable;
 
-	protected static const Patients = 0;
-	protected static const Doctors = 1;
-	protected static const Practitioners = 2;
-	protected static const Appointments = 3;
+	protected static $Patients 		= 0;
+	protected static $Doctors 		= 1;
+	protected static $Practitioners = 2;
+	protected static $Appointments 	= 3;
 
 
 	public function indexAction()

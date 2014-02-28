@@ -7,10 +7,11 @@
  */
 return array(
     'modules' => array(
+        'ZendDeveloperTools',
         'DoctrineModule',
-        'DoctrineORMModule'
+        'DoctrineORMModule',
         'Application',
-        'Clinic',
+        'Clinic'
     ),
 
     'module_listener_options' => array(

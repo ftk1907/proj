@@ -10,9 +10,11 @@
     "require": {
         "php": ">=5.3.3",
         "doctrine/orm": "2.4",
+        "symfony/yaml": "2.*",
         "doctrine/doctrine-orm-module": "0.8.0",
         "zendframework/zendframework": "2.2.*",
         "zendframework/zftool": "dev-master",
-        "zf-commons/zfc-user": "dev-master"
+        "zf-commons/zfc-user": "dev-master",
+        "zendframework/zend-developer-tools": "dev-master"
     }
 }
