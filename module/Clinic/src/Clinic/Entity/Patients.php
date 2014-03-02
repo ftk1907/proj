@@ -11,19 +11,19 @@ use Doctrine\ORM\Mapping as ORM;
  class Patients
  {
     /**
-     * @Column(type="integer")
-     * @id
-     * @GeneratedValue
+     * @ORM\Column(type="integer")
+     * @ORM\id
+     * @ORM\GeneratedValue
      **/
     protected $id;
 
-    /** @ORM\Column(unique=true, nullable=false, type="String") */
+    /** @ORM\Column(type="String", unique=true, nullable=false, ) */
     protected $email;
 
-    /** @\RM'Column(nullable=false, type="String") */
+    /** @ORM\Column(type="String", nullable=false)  */
     protected $name;
 
-    /** @ORM\Column(nullable=false, type="String") */
+    /** @ORM\Column(type="String", nullable=false) */
     protected $surname;
 
     /** @ORM\Column(type="DateTime", nullable=false) */
