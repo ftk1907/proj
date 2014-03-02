@@ -3,28 +3,27 @@
 namespace Clinic\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
 
 /**
-  * Doctors Entity
-  * @ORM\Entity(repositoryClass="Clinic\Entity\DoctorsRepository")
-  **/
- class Doctors
+ * Patients Entity
+ * @ORM\Entity(repositoryClass="Clinic\Entity\PatientsRepository")
+ **/
+ class Patients
  {
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue
+     * @Column(type="integer")
+     * @id
+     * @GeneratedValue
      **/
     protected $id;
 
-    /** @ORM\Column(type="String", unique=true, nullable=false) */
+    /** @ORM\Column(unique=true, nullable=false, type="String") */
     protected $email;
 
-    /** @ORM\Column(type="String", nullable=false) */
+    /** @\RM'Column(nullable=false, type="String") */
     protected $name;
 
-    /** @ORM\Column(type="String", nullable=false) */
+    /** @ORM\Column(nullable=false, type="String") */
     protected $surname;
 
     /** @ORM\Column(type="DateTime", nullable=false) */
@@ -33,8 +32,8 @@ use Doctrine\Common\Collections\ArrayCollection;
     /** @ORM\Column(type="String(255)", nullable=false) */
     protected $password;
 
-    /** @ORM\OneToMany(targetEntity="Practitioners", mappedBy="supervisor") */
-    protected $practitioners;
+    /** @ORM\Column(type="boolean", nullable=false) */
+    protected $verified;
 
     public function __construct($name, $surname, $email, $password)
     {
@@ -43,6 +42,7 @@ use Doctrine\Common\Collections\ArrayCollection;
         $this->email    = $email;
         $this->password = $password;
         $this->joined   = new \DateTime("Now");
-        $this->practitioners = new ArrayCollection();
+        $this->verified = 0;
     }
- }
+
+ } // END public class Patients

@@ -12,7 +12,7 @@ class WorkingDay
         $timeSlots = array();
     }
 
-    public function ($value='')
+    public function doSomething()
     {
         # code...
     }

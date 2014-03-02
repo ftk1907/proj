@@ -11,7 +11,7 @@ class CalendarController extends AbstractClinicController
     function indexAction()
     {
         return array(
-            'calendar' => new Calendar();
+            'calendar' => new Calendar()
         );
     }
 

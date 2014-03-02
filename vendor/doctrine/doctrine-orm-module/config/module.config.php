@@ -35,9 +35,9 @@ return array(
                 'params' => array(
                     'host'     => 'localhost',
                     'port'     => '3306',
-                    'user'     => 'username',
+                    'user'     => 'root',
                     'password' => 'password',
-                    'dbname'   => 'database',
+                    'dbname'   => 'Clinic',
                 )
             ),
         ),
