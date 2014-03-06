@@ -6,9 +6,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
-  * Doctors Entity
-  * @ORM\Entity(repositoryClass="Clinic\Entity\DoctorsRepository")
-  **/
+ * @ORM\Entity
+ **/
  class Doctors
  {
     /**

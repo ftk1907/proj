@@ -7,6 +7,7 @@
 		<th>Id</th>
 		<th>Name</th>
 		<th>Surname</th>
+		<th>Supervisor</th>
 		<th><!-- Appointments --></th>
 		<th><!-- Email --></th>
 		<th>&nbsp;</th>
@@ -16,34 +17,36 @@
 <?php foreach($this->practitioners as $practitioner): ?>
 <!-- Data -->
 	<tr>
-		<td> <?= $practitioner->id ?> </td>
-		<td> <?= $practitioner->name ?> </td>
-		<td> <?= $practitioner->surname ?> </td>
-		<td> 
+		<td> <?= $practitioner->getId() ?> </td>
+		<td> <?= $practitioner->getName() ?> </td>
+		<td> <?= $practitioner->getSurname() ?> </td>
+		<td> <?= "Dr. {$practitioner->getSuperVisor()->getName()}
+				 {$practitioner->getSuperVisor()->getSurname()}"  ?></td>
+		<td>
 			<a href="
 				<?= $this->url('admin', array(
-						'action' => 'appointments', 
-						'id' => $practitioner->id
+						'action' => 'appointments',
+						'id' => $practitioner->getId()
 					));
 				?>">appointments
 			</a>
 		</td>
-		<td> <a href="mailto:<?= $practitioner->email ?> ">email</a> </td>
+		<td> <a href="mailto:<?= $practitioner->getEmail() ?> ">email</a> </td>
 		<td>
 			<a href="
 				<?= $this->url('admin', array(
-						'action' => 'editpractitioner', 
-						'id' => $practitioner->id
+						'action' => 'editpractitioner',
+						'id' => $practitioner->getId()
 					)); ?>">edit
-			</a> 
+			</a>
 		</td>
-		<td> 
+		<td>
 			<a href="
 				<?= $this->url('admin', array(
-						'action' => 'deletepractitioner', 
-						'id' => $practitioner->id
+						'action' => 'deletepractitioner',
+						'id' => $practitioner->getId()
 					)); ?>">delete
-			</a> 
+			</a>
 		</td>
 	</tr>
 

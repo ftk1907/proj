@@ -10,7 +10,7 @@ use Zend\View\Model\ViewModel;
 */
 abstract class AbstractClinicController extends AbstractActionController
 {
-	private   $loggedIn = true;
+	private   $loggedIn = false;
 
 	protected $doctorsTable;
 	protected $appointmentsTable;

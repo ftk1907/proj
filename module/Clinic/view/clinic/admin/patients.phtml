@@ -16,34 +16,34 @@
 <?php foreach($this->patients as $patient): ?>
 <!-- Data -->
 	<tr>
-		<td> <?= $patient->id ?> </td>
-		<td> <?= $patient->name ?> </td>
-		<td> <?= $patient->surname ?> </td>
-		<td> 
+		<td> <?= $patient->getId() ?> </td>
+		<td> <?= $patient->getName() ?> </td>
+		<td> <?= $patient->getSurname() ?> </td>
+		<td>
 			<a href="
 				<?= $this->url('admin', array(
-						'action' => 'appointments', 
-						'id' => $patient->id
+						'action' => 'appointments',
+						'id' => $patient->getId()
 					));
 				?>">appointments
 			</a>
 		</td>
-		<td> <a href="mailto:<?= $patient->email ?> ">email</a> </td>
+		<td> <a href="mailto:<?= $patient->getEmail() ?> ">email</a> </td>
 		<td>
 			<a href="
 				<?= $this->url('admin', array(
-						'action' => 'editpatient', 
-						'id' => $patient->id
+						'action' => 'editpatient',
+						'id' => $patient->getId()
 					)); ?>">edit
-			</a> 
+			</a>
 		</td>
-		<td> 
+		<td>
 			<a href="
 				<?= $this->url('admin', array(
-						'action' => 'deletepatient', 
-						'id' => $patient->id
+						'action' => 'deletepatient',
+						'id' => $patient->getId()
 					)); ?>">delete
-			</a> 
+			</a>
 		</td>
 	</tr>
 

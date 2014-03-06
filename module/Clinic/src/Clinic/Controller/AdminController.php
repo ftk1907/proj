@@ -91,31 +91,33 @@ class AdminController extends AbstractClinicController {
 
 	public function patientsAction()
 	{
-		$patients = $this->getPatientsTable()->fetchAll();
+		$em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+		$patients = $em->getRepository('Clinic\Entity\Patients')->findAll();
 		return array('patients' => $patients);
 	}
 
 	public function deleteDoctorAction()
 	{
-		try {
-			$id = $this->params('id');
-			$this->getDoctorsTable()->deleteDoctor($id);
-			$this->redirect()->toRoute('admin', array('action' => 'doctors'));
-		}
-		catch (Exception $e) {
-			return array('exception' => $e);
-		}
+		$id = $this->params('id');
+		$em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+		$doctor = $em->getRepository('Clinic\Entity\Doctors')->findBy(array('id' => $id));
+		$em->remove($doctor);
+		$em->flush();
+		$this->redirect()->toRoute('admin', array('action' => 'doctors'));
 	}
 
 	public function appointmentsAction()
 	{
 		$id = $this->params('id');
 		$data = array('appointments' => array());
+		$em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+		$appointments = $em->getRepository('Clinic\Entity\Appointments');
+
 		if(!$id) {
-			$data['appointments'] = $this->getAppointmentsTable()->fetchAll();
+			$data['appointments'] = $appointments->findAll();
 		}
 		else {
-			$data['appointments'] = $this->getAppointmentsTable()->fetchDoctorsAppointments($id);
+			$data['appointments'] = $appointments->findBy(array('doctor' => $id));
 		}
 
 		return $data;
@@ -123,7 +125,8 @@ class AdminController extends AbstractClinicController {
 
 	public function practitionersAction()
 	{
-		$practitioners = $this->getPractitionersTable()->fetchAll();
+		$em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+		$practitioners = $em->getRepository('Clinic\Entity\Practitioners')->findAll();
 		return array('practitioners' => $practitioners);
 	}
 

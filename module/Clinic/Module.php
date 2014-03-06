@@ -18,6 +18,8 @@ use Zend\Db\ResultSet\ResultSet;
 use Zend\Db\TableGateway\TableGateway;
 
 
+
+
 class Module
 {
     public function getConfig()
@@ -96,6 +98,11 @@ class Module
                 'Calendar' => function() {
                     return new Calendar();
                 },
+
+                'EntityManager' => function()
+                {
+                    return new Doctrine\ORM\EntityManager();
+                }
             ),
         );
 
