@@ -5,6 +5,10 @@ return array(
         'invokables' => array(
             'Clinic\Controller\Index' => 'Clinic\Controller\IndexController',
             'Clinic\Controller\Admin' => 'Clinic\Controller\AdminController',
+            'Clinic\Controller\AdminDoctors' => 'Clinic\Controller\AdminDoctorsController',
+            'Clinic\Controller\AdminPatients' => 'Clinic\Controller\AdminPatientsController',
+            'Clinic\Controller\AdminPractitioners' => 'Clinic\Controller\AdminPractitionersController',
+            'Clinic\Controller\AdminAppointments' => 'Clinic\Controller\AdminAppointmentsController',
             'Clinic\Controller\User'  => 'Clinic\Controller\UserController',
         ),
     ),
@@ -39,6 +43,62 @@ return array(
                     ),
                 ),
             ),
+            'adminDoctors' => array(
+                'type'    => 'segment',
+                'options' => array(
+                    'route'    => '/admin/doctors[/][:action][/:id]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id'     => '[0-9]+',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Clinic\Controller\AdminDoctors',
+                        'action'     => 'index',
+                    ),
+                ),
+            ),
+            'adminPatients' => array(
+                'type'    => 'segment',
+                'options' => array(
+                    'route'    => '/admin/patients[/][:action][/:id]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id'     => '[0-9]+',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Clinic\Controller\AdminPatients',
+                        'action'     => 'index',
+                    ),
+                ),
+            ),
+            'adminPractitioners' => array(
+                'type'    => 'segment',
+                'options' => array(
+                    'route'    => '/admin/practitioners[/][:action][/:id]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id'     => '[0-9]+',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Clinic\Controller\AdminPractitioners',
+                        'action'     => 'index',
+                    ),
+                ),
+            ),
+            'adminAppointments' => array(
+                'type'    => 'segment',
+                'options' => array(
+                    'route'    => '/admin/appointments[/][:action][/:id]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id'     => '[0-9]+',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Clinic\Controller\AdminAppointments',
+                        'action'     => 'index',
+                    ),
+                ),
+            ),
             'user' => array(
                 'type'    => 'segment',
                 'options' => array(
@@ -53,6 +113,13 @@ return array(
                     ),
                 ),
             ),
+        ),
+    ),
+
+    'service_manager' => array(
+        'factories' => array(
+            'PractitionerRegisterForm'
+                => 'Clinic\Form\PractitionerRegisterForm',
         ),
     ),
 

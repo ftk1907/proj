@@ -6,48 +6,49 @@ use Zend\Mvc\Controller\AbstractActionController;
 abstract AdminController extends AbstractActionController {
 
 	private $repository;
+	private $entityName;
 
-	private function setRepository($entityName)
+	/**
+	 * Service locator function for repository.
+	 * @param $entityName
+	 * @return Repository
+	 **/
+	protected function getRepository($entityName)
 	{
+		$this->entityName = $entityName;
 		$em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
 		$repository = $em->getRepository("Clinic\Entity\{$entityName}")->findAll();
 		return $this->repository;
 	}
 
-	private function getRepository()
+	protected function getEntityManager()
 	{
-		return $this->repository;
+		$em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+		return $em;
 	}
 
 	/**
 	 * @access public
 	 * @param a$id
 	 */
-	public function addAction($entity)
-	{
-		$this->repository->persist($entity);
-		$repository->flush();
-	}
+	public abstract function addAction($entity);
 
 	/**
 	 * @access public
 	 * @param a$id
 	 */
-	public abstract function editAction();
+	public abstract function editAction($id);
 
 	/**
 	 * @access public
 	 * @param a$id
 	 */
-	public function getAction($attributes)
-	{
-		return array('entities', $repository->findBy($attributes));
-	}
+	public abstract function getAction($attributes);
 
 	/**
 	 * @access public
 	 * @param a$id
 	 */
-	public function deleteAction($id);
+	public abstract function deleteAction($id);
 }
 ?>

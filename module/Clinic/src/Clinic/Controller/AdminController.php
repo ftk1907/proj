@@ -129,5 +129,4 @@ class AdminController extends AbstractClinicController {
 		$practitioners = $em->getRepository('Clinic\Entity\Practitioners')->findAll();
 		return array('practitioners' => $practitioners);
 	}
-
 }

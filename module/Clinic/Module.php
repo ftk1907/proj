@@ -40,9 +40,6 @@ class Module
 
     public function getServiceConfig()
     {
-
-        // itterator to create the array?
-
         return array(
             'factories' => array(
                 // Appointments
@@ -88,7 +85,7 @@ class Module
                     return $table;
                 },
 
-                'PatientsTableGateway' => function ($sm) {
+                'PatientsTableGateway' => function($sm) {
                     $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
                     $resultSetPrototype = new ResultSet();
                     $resultSetPrototype->setArrayObjectPrototype(new Patients());
@@ -99,10 +96,10 @@ class Module
                     return new Calendar();
                 },
 
-                'EntityManager' => function()
-                {
-                    return new Doctrine\ORM\EntityManager();
+                'PractitionerRegisterForm' => function($sm){
+                    return new Clinic\Form\PractitionerRegisterForm($sm);
                 }
+
             ),
         );
 
