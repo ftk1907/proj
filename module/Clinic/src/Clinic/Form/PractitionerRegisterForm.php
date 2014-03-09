@@ -10,7 +10,7 @@ class PractitionerRegisterForm implements FactoryInterface
 {
     public function createService(ServiceLocatorInterface $serviceManager)
     {
-        $form = new Form;
+        $form = new Form('Practitioner Register');
 
         $form->add(array(
             'name' => 'name',

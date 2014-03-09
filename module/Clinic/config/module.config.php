@@ -116,13 +116,6 @@ return array(
         ),
     ),
 
-    'service_manager' => array(
-        'factories' => array(
-            'PractitionerRegisterForm'
-                => 'Clinic\Form\PractitionerRegisterForm',
-        ),
-    ),
-
     'view_manager' => array(
         'template_path_stack' => array(
             'clinic' => __DIR__ . '/../view',

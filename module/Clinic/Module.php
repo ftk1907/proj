@@ -96,10 +96,7 @@ class Module
                     return new Calendar();
                 },
 
-                'PractitionerRegisterForm' => function($sm){
-                    return new Clinic\Form\PractitionerRegisterForm($sm);
-                }
-
+                'PractitionerRegisterForm' => 'Clinic\Form\PractitionerRegisterForm',
             ),
         );
 
